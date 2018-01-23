@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{752E1B31-A701-4A8A-855F-C59C6C522642}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>AFoodLog</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Services\IDataStore.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\AboutViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\BaseViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ItemDetailViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ItemsViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\MainPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\AboutPage.xaml.cs">
+      <DependentUpon>AboutPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\ItemDetailPage.xaml.cs">
+      <DependentUpon>ItemDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\ItemsPage.xaml.cs">
+      <DependentUpon>ItemsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\NewItemPage.xaml.cs">
+      <DependentUpon>NewItemPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Models\LogEntry.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\LogEntryOccurrence.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\NutritionData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Extensions\LogEntryExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\FLService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\FLServiceProvider.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\IFLLog.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\ILogEntryCreator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\LocalDataIO.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\LocalLog.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\MainTabs.xaml.cs">
+      <DependentUpon>MainTabs.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Models\MockDataStore.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\AboutPage.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\ItemDetailPage.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\ItemsPage.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\NewItemPage.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)App.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\MainTabs.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UITextResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)Models\.DS_Store" />
+  </ItemGroup>
+</Project>
